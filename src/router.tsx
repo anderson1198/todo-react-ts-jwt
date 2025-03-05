@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Layout from "./pages/home/Layout";
 const Router = () => {
-  const Pets = () => <h1>Pet List</h1>;
   // const Layout = () => <h1>Layout</h1>;
   return (
     <>

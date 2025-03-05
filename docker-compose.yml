@@ -1,0 +1,17 @@
+
+services:
+  todosDB:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: react-todos-db
+    restart: always
+    ports:
+      - "1433:1433"
+    environment:
+      - SA_PASSWORD=Temporal01*
+      - MSSQL_PID=Developer
+      - ACCEPT_EULA=Y
+      - MSSQL_SERVER_NAME=todosdb
+      - S=localhost/TodosDB
+
+    volumes: 
+      - ./sqlServer:/var/opt/mssql/data
